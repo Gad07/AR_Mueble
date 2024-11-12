@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/md_theme_onPrimary"
+    tools:context=".ui.EditAdmin.EditAActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.45"
+        android:scaleType="centerCrop"
+        android:src="@raw/img"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar Modelo de Mueble"
+            android:textAlignment="center"
+            android:textColor="@color/md_theme_tertiary_highContrast"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Campo para seleccionar un modelo de mueble -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Selecciona el modelo"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/md_theme_onBackground_mediumContrast"
+            app:boxStrokeWidth="2dp"
+            android:layout_marginBottom="20dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteModelos"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:inputType="none"
+                android:textColor="@color/md_theme_onBackground_mediumContrast" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo para editar el nombre del modelo -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del modelo"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/md_theme_onBackground_mediumContrast"
+            app:boxStrokeWidth="2dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editNombreModelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_theme_onBackground_mediumContrast"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo para editar la descripción del modelo -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción del modelo"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/md_theme_onBackground_mediumContrast"
+            app:boxStrokeWidth="2dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editDescripcionModelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_theme_onBackground_mediumContrast"
+                android:maxLines="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón para guardar los cambios -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdate"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Cambios"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/md_theme_onBackground_mediumContrast"
+            android:textColor="@color/md_theme_onPrimary"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<!-- res/drawable/fondo.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/md_theme_inverseOnSurface_mediumContrast"/>
+    <stroke
+        android:width="2dp"
+        android:color="@color/md_theme_onBackground_highContrast"/>
+    <corners android:radius="8dp"/>
+</shape>

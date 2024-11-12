@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.ar_muebles.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.ar_muebles.ui.login.LoginActivity"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.example.ar_muebles.ui.register.RegisterActivity"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/nav_editarAdmin"
+        android:name="com.example.ar_muebles.ui.EditAdmin.EditAActivity"
+        android:label="Editar Perfil"
+        tools:layout="@layout/fragment_editar_admin" />
+
+    <fragment
+        android:id="@+id/nav_acercaDe"
+        android:name="com.example.ar_muebles.ui.About.about"
+        android:label="Acerca de"
+        tools:layout="@layout/fragment_acerca_de" />
+
+    <fragment
+        android:id="@+id/nav_realidadAumentada"
+        android:name="com.example.ar_muebles.ui.RA.RAFragment"
+        android:label="Muebles"
+        tools:layout="@layout/fragment_principal" />
+
+    <fragment
+        android:id="@+id/nav_agregarAdmin"
+        android:name="com.example.ar_muebles.ui.AddAdmin.AddAdminActivity"
+        android:label="Agregar Mueble"
+        tools:layout="@layout/fragment_agregar_admin" />
+
+    <fragment
+        android:id="@+id/nav_eliminarAdmin"
+        android:name="com.example.ar_muebles.ui.deleteAdmin.DeleteAdminFragment"
+        android:label="Eliminar mueble"
+        tools:layout="@layout/fragment_eliminar_admin"/>
+
+    <fragment
+        android:id="@+id/nav_editarPerfil"
+        android:name="com.example.ar_muebles.ui.editarPerfil.editarPActivity"
+        android:label="Editar Perfil"
+        tools:layout="@layout/fragment_editar_perfil"/>
+
+</navigation>

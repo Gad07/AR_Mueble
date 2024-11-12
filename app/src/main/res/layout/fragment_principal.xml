@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RA.RAFragment">
+
+    <!-- Espacio vacío superior para dejar margen y respetar el diseño sin ningún elemento visible -->
+    <View
+        android:id="@+id/topSpace"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Selector del modelo del catálogo -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/modelSelectionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/md_theme_onBackground_mediumContrast"
+        app:boxStrokeWidth="2dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/topSpace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteModelos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Selecciona un modelo"
+            android:inputType="none"
+            android:focusable="false"
+            android:textColor="@color/md_theme_onBackground_mediumContrast"
+            android:padding="8dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Vista de la escena AR -->
+    <io.github.sceneview.ar.ArSceneView
+        android:id="@+id/sceneView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/modelSelectionLayout"
+        app:layout_constraintBottom_toTopOf="@id/buttonContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Contenedor para los botones inferiores -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Botón para rotar el modelo hacia la izquierda -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRotateLeft"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="⟨" />
+
+        <!-- Botón para colocar el objeto AR -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/place"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Colocar" />
+
+        <!-- Botón para desanclar el objeto AR -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/unanchor"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Quitar" />
+
+        <!-- Botón para rotar el modelo hacia la derecha -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRotateRight"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:text="⟩" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

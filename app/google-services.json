@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "144095036629",
+    "project_id": "ar-muebles",
+    "storage_bucket": "ar-muebles.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144095036629:android:5efd62ba68318549e40e5c",
+        "android_client_info": {
+          "package_name": "com.example.ar_muebles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144095036629-57puv47bishga8730aplef2k0615tle7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ar_muebles",
+            "certificate_hash": "574bf02b0c2f1400f2f63a1912cddc4e49fecbd8"
+          }
+        },
+        {
+          "client_id": "144095036629-enflclkjkt2tu5lhvn573jgo8b6sdpm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHvcDj1kHNYiL3uvFiMFFiCYQZ6O6o80M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144095036629-enflclkjkt2tu5lhvn573jgo8b6sdpm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
